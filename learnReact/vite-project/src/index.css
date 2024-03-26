@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  min-height: 100vh;
+  padding: 5px;
+}
+
+header {
+  grid-area: auto/auto/auto/span 7;
+  background-color: blueviolet;
+  padding: 4rem;
+  margin-bottom: 5px;
+}
+
+nav {
+  display: grid;
+  grid-area: auto/auto/auto/span 2;
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.NavItem {
+  background-color: hotpink;
+  padding: 4rem;
+  margin: 0 5px 5px 0;
+}
+
+aside {
+  display: grid;
+  background-color: pink;
+  grid-area: auto/auto/auto/span 2;
+}
+
+main {
+  background-color: white;
+  grid-area: auto/auto/auto/span 3;
+  padding: 4rem;
+}
+
+footer {
+  grid-area: auto/auto/auto/span 7;
+  background-color: beige;
+  padding: 6rem;
+  margin-top: 5px;
+}
