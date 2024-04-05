@@ -1,0 +1,17 @@
+.Hero__img {
+    width: 100%;
+}
+
+body {
+    width: 95%;
+    margin: auto;
+}
+
+.main {
+    background-color: #041311;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
