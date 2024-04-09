@@ -1,22 +1,30 @@
-// import LandingPage from "./pages/landingPage/landingPage"
-import Product from "./components/product/Product"
-import './App.css'
-import Header from "./components/header/Header"
+
+import { Routes, Route } from 'react-router-dom'
 import ProductPage from "./pages/productPage/ProductPage"
+import LandingPage from "./pages/landingPage/LandingPage"
+import MyAccount from './pages/myAccount/MyAccount'
+import './App.css'
+import CheckoutPage from './pages/checkoutPage/CheckoutPage'
+
 
 
 function App() {
   return (
-    <div>
-      <Header />
 
-      <ProductPage />
-      <Product />
-    </div>
+    <>
+
+      <Routes>
+        <Route exact path="/" element={<LandingPage />} />
+        <Route path="/products" element={<ProductPage />} />
+        <Route path="/my-account" element={<MyAccount />} />
+        <Route path="/logo" element={<LandingPage />} />
+        <Route path="/CheckoutPage" element={<CheckoutPage />} />
+
+      </Routes>
+
+    </>
+
   )
 }
-
-
-
 
 export default App

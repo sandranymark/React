@@ -1,9 +1,11 @@
-
+import { Link } from 'react-router-dom';
 
 function Logo() {
     return (
         <div className="logo">
-            <img src="src/assets/sinus-logo.svg" alt="logotype" />
+            <Link to="/">
+                <img src="src/assets/sinus-logo.svg" alt="logotype" />
+            </Link>
         </div>
     )
 }

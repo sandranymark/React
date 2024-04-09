@@ -1,12 +1,22 @@
+
+import Header from '../../components/header/Header'
+import ProductItem from '../../components/productItem/ProductItem'
 import './landingPage.css'
 
 
-function landingPage() {
+
+function LandingPage() {
     return (
-        <main>
-            <img className='Hero__img' src="src/assets/poster.png" alt="Bild på skateboard" />
-        </main>
+        <>
+            <Header />
+            <main>
+                <img className='Hero__img' src="src/assets/poster.png" alt="Bild på skateboard" />
+                <div className='product-grid'>
+                    <ProductItem />
+                </div>
+            </main>
+        </>
     )
 }
 
-export default landingPage
+export default LandingPage
