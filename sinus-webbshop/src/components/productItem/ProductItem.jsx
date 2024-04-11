@@ -5,7 +5,7 @@ import products from '../../assets/data'
 function ProductItem() {
 
 
-    const hoodies = products.filter(product => product.category === "hoodie").slice(0, 4);
+    const hoodies = products.filter(product => product.category === "hoodie").slice(0, 3);
 
     return (
         <>

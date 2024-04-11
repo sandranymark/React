@@ -5,15 +5,19 @@ import Header from "../../components/header/Header";
 
 
 
+const getProducts = (setProducts) => {
+    // return axios.get("https://santosnr6.github.io/Data/sinus_products.json")
+    //     .then(response => responses.data)
+    //     .catch(error => {
+    //         console.log("Error fetching products:", error);
+    //         return [];
+    //     });
 
-
-
-
-
-
-const getProducts = () => {
-    return axios.get("https://santosnr6.github.io/Data/sinus_products.json")
-        .then(response => response.data)
+    axios.get("https://santosnr6.github.io/Data/sinus_products.json")
+        .then(response => {
+            console.log(response.data)
+            setProducts(response.data);
+        })
         .catch(error => {
             console.log("Error fetching products:", error);
             return [];
@@ -24,7 +28,8 @@ const getProducts = () => {
 function ProductPage() {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        getProducts().then(data => setProducts(data))
+        //getProducts().then(data => setProducts(data))
+        getProducts(setProducts);
     }, [])
 
     useEffect(() => {
